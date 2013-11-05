@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="keywords" content="david brenneman python django pyramid d3.js iOS iPhone javascript html5 web mobile application consulting software engineer developer hacker maker geek devops cloud aws openstack linux open source" />
+    <meta name="description" content="david brenneman" />
+    <meta name="author" content="David Brenneman">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dontpanic.css') }}" type="text/css" media="screen"/>
+    {% block head %}{% endblsock %}
+  </head>
+s  <body>
+    <div class="container-narrow content">
+        <div class="navbar">
+        <ul class="nav  pull-right">
+          <li class="{% block home_highlight %}{% endblock %}"><a href="{{ url_for('show_homepage')}}"><i class="icon-home"></i>Home</a></li>
+          <li class="{% block blog_highlight %}{% endblock %}"><a href="{{ url_for('show_articles')}}"><i class="icon-comments"></i>Blog</a></li>
+          {% if session.logged_in %}
+          <li class="{% block add_article_highlight %}{% endblock %}"><a href="{{ url_for('add_article') }}"><i class="icon-share"></i>Add Article</a></li>
+          <li><a href="{{ url_for('logout') }}"><i class="icon-remove-sign"></i>Logout</a></li>
+          {% endif %}
+        </ul>
+        </div>
+      <div class="page-header">
+        <h2>David Brenneman</h2>
+      </div>
+      {{  content }}
+      <hr>
+      <ul class="inline">
+        <li>
+          <a href="mailto:db@davidbrenneman.com"><i class="icon-envelope-alt"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/davidbrenneman" target="_blank"><i class="icon-twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/dbrenneman" target="_blank"><i class="icon-github"></i></a>
+        </li>
+        <li>
+          <a href="{{ url_for('recent_feed') }}" target="_blank"><i class="icon-rss"></i></a>
+        </li>
+        <li>
+          <a href="/">&copy; David Brenneman {{ year }}</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37129617-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <!-- Google Analytics end -->
+  </body>
+</html>
