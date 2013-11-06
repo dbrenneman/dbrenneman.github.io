@@ -1,12 +1,7 @@
 ---
 layout: post
-title: My journey from Plone to Flask: a Python Web Application Framework Oddessy
+title: My journey from Plone to Flask - a Python Web Application Framework Odyssey
 ---
-
-h1. {{ page.title }}
-
-p(meta). 27 January 2013 - San Francisco
-
 
 I began my career in web application development by teaching myself Plone and Python for a client who requested some customizations of their Plone-based extranet back in 2004. The early aughts were the heyday of Plone, the enterprise grade open source content management system that is built on top of the Zope web application server. Zope is a fairly complex beast with its own object persistence solution called the Zope Object Database, or ZODB, which is like a dict of dicts, pickling Python objects and storing them directly on the filesystem. Zope has a steep learning curve. Zope is comprised of many modules and utilizes aspect oriented programming patterns through the use of utilities, interfaces and adapters in what is termed the Zope Component Architecture, or ZCA. Zope is configured using a dialect of XML known as ZCML, the Zope Configuration Markup Language. The layers of complexity and abstraction present in Zope and by extension Plone forced me to learn a lot about software engineering relatively rapidly in order to be productive. Over the next several years, I became more and more involved in the Plone community, attending conferences and sprints all over the world, and freelancing on a number of Plone based projects. The Plone community is one of the best open source communities in the world, hands down.
 
