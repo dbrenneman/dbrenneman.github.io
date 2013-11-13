@@ -2,47 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <meta name="keywords" content="david brenneman python django pyramid d3.js iOS iPhone javascript html5 web mobile application consulting software engineer developer hacker maker geek devops cloud aws openstack linux open source" />
-    <meta name="description" content="david brenneman" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="David Brenneman's Blog" />
     <meta name="author" content="David Brenneman">
-    <link rel="shortcut icon" href="" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="css/dontpanic.css" type="text/css" media="screen"/>
+    <meta name="keywords" content="david brenneman python django pyramid d3.js javascript html5 web application consulting software engineer developer hacker maker geek devops cloud aws openstack linux open source" />
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>{{ page.title }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/dbrenneman.css" rel="stylesheet">
+
   </head>
+
   <body>
-    <div class="container-narrow content">
-        <div class="navbar">
-        <ul class="nav  pull-right">
-          <li class=""><a href=""><i class="icon-comments"></i>Blog</a></li>
-          <li class=""><a href=""><i class="icon-home"></i>About</a></li>
-        </ul>
-        </div>
-      <div class="page-header">
-        <h2>David Brenneman</h2>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Begin page content -->
+      <div class="container">
+        {{  content }}
       </div>
-      {{  content }}
-      <hr>
-      <ul class="inline">
-        <li>
-          <a href="mailto:db@davidbrenneman.com"><i class="icon-envelope-alt"></i></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/davidbrenneman" target="_blank"><i class="icon-twitter"></i></a>
-        </li>
-        <li>
-          <a href="https://github.com/dbrenneman" target="_blank"><i class="icon-github"></i></a>
-        </li>
-        <li>
-          <a href="{ site.url }" target="_blank"><i class="icon-rss"></i></a>
-        </li>
-        <li>
-          <a href="/">&copy; David Brenneman 2013</a>
-        </li>
-      </ul>
     </div>
+
+    <div id="footer">
+      <div class="container">
+        <ul class="inline">
+          <li>
+            <a href="mailto:db@davidbrenneman.com"><i class="icon-envelope-alt"></i>db@davidbrenneman.com</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/davidbrenneman" target="_blank"><i class="icon-twitter"></i>Twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com/dbrenneman" target="_blank"><i class="icon-github"></i>Github</a>
+          </li>
+          <li>
+            <a href="/" target="_blank"><i class="icon-rss"></i>Syndicated Articles</a>
+          </li>
+          <li>
+            <a href="/">&copy; David Brenneman 2013</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <!-- Google Analytics -->
     <script type="text/javascript">
 
@@ -58,5 +67,6 @@
 
     </script>
     <!-- Google Analytics end -->
+
   </body>
 </html>
